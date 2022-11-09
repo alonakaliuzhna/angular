@@ -1,0 +1,27 @@
+<div class="selection-container">
+<form [formGroup]="currencyForm"
+class ="form-box">
+  <div class="box">
+  <input type="text"
+   formControlName="amount">
+  <select  name="" id="country1" formControlName="originCountry">
+    <option value="USD">US dollar</option>
+    <option value="EUR">Euro</option>
+    <option value="UAH">Ukranian Grivna</option>
+  </select>
+</div>
+  <p class="title">  to </p>
+  <select  name="" id="country1" formControlName="targetCountry">
+    <option value="USD">US dollar</option>
+    <option value="EUR">Euro</option>
+    <option value="UAH">Ukranian Grivna</option>
+  </select>
+  <button (click)="convert()"> Submit</button>
+  <div class="result-container">
+    <p class="title"> {{ value$ | async }}</p>
+  </div>
+</form>
+
+
+</div>
+
